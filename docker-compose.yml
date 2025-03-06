@@ -16,3 +16,6 @@ services:
         user: "0:0"
         ports:
             - "8080:8080" # expose port 8080 to the host
+
+volumes:
+    config:
