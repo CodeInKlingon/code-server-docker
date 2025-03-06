@@ -1,4 +1,4 @@
-FROM codercom/code-server:4.8.1
+FROM codercom/code-server:latest
 
 # Install node and npm
 RUN curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && \

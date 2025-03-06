@@ -11,7 +11,7 @@ services:
         tty: true
         volumes:
             - "/home:/home/coder" # attach home folder for global project code editing
-            - "config:/root/.config/code-server"
+            - "/home/ubuntu/code-server/config:/root/.config/code-server"
             - "/var/run/docker.sock:/var/run/docker.sock" #attach docker socket for docker control
         user: "0:0"
         ports:
