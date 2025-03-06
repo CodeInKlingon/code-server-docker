@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+    ide:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: danielstokes/codeserver
+        container_name: code-server
+        restart: unless-stopped
+        tty: true
+        volumes:
+            - "/home:/home/coder" # attach home folder for global project code editing
+            - "config:/root/.config/code-server"
+            - "/var/run/docker.sock:/var/run/docker.sock" #attach docker socket for docker control
+        user: "0:0"
+        ports:
+            - "8080:8080" # expose port 8080 to the host
